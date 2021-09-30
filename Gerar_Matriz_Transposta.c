@@ -1,5 +1,5 @@
 /*
-* matriz transposta ï¿½ a matriz que se obtï¿½m da troca de linhas por colunas de uma dada matriz.
+* matriz transposta Ã© a matriz que se obtÃªm da troca de linhas por colunas de uma dada matriz.
 ex:
 
 1 5       1 7 8
@@ -8,21 +8,21 @@ ex:
 
 */
 
-//importaï¿½ï¿½o de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <time.h>
 
 int linha=10, coluna=10;
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void preencherMatriz (int matriz [linha][coluna]);
 void transporMatriz (int matriz [linha][coluna], int transposta [coluna][linha]);
 void exibirMatriz (int matriz [linha][coluna]);
 
-//função main
+//funÃ§Ã£o main
 void main ()
 {
-	//declaraçãode variáveis
+	//declaraÃ§Ã£ode variÃ¡veis
 	int temp;
 	int m[linha][coluna];
 	int transposta[coluna][linha];
@@ -51,11 +51,11 @@ scanf("%d", &coluna);
 	exibirMatriz (transposta);
 }
 
-//Implementando a funï¿½ï¿½o preencher matriz aleatoriamente 
+//Implementando a funÃ§Ã£o preencher matriz aleatoriamente 
 void preencherMatriz (int matriz [linha][coluna])
 {
 	
-//declaraçãode variáveis
+//declaraÃ§Ã£ode variÃ¡veis
 int i, j;
 	
 	srand (time(NULL));
@@ -69,10 +69,10 @@ int i, j;
 	}
 }
 
-//Implementando a funï¿½ï¿½o Exibir matriz de nï¿½meros inteiros
+//Implementando a funÃ§Ã£o Exibir matriz de nÃºmeros inteiros
 void exibirMatriz (int matriz [linha][coluna])
 {
-	//declaraçãode variáveis
+	//declaraÃ§Ã£ode variÃ¡veis
 	int i, j;
 	
 	//percorrendo as linhas da matriz
@@ -81,28 +81,24 @@ void exibirMatriz (int matriz [linha][coluna])
 		//percorrendo as colunas da matriz
 		for (j=0;j<coluna;j++)
 		{
-			printf ("%2d ", matriz[i][j]); // esse 2 ajusta a exibiï¿½ï¿½o para 2 casas decimais
+			printf ("%2d ", matriz[i][j]); // esse 2 ajusta a exibiÃ§Ã£o para 2 casas decimais
 		}
 		
-		//pulando para a próxima linha
+		//pulando para a prÃ³xima linha
 		printf ("\n");		
 	}
 }	
 
 void transporMatriz (int matriz[linha][coluna], int transposta[coluna][linha])
 {
-	//declaraçãode variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j;
 	
-
 	for (i=0;i<linha;i++)
 	{
 		for (j=0;j<coluna;j++)													
 		{																	
 			transposta [j][i] = matriz [i][j];
 		}
-						
 	}
 }
-
-
